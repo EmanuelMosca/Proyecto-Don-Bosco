@@ -5,17 +5,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
@@ -23,7 +23,7 @@ h3 {
 p {
   font-family: "Verdana", sans-serif;
   color: #ffd700;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -39,7 +39,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 1rem;
   background-color: #333;
 }
 
@@ -76,18 +76,43 @@ nav a {
 }
 
 .search-bar input[type="text"] {
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   border: none;
   background-color: #f2f2f2;
   border-radius: 4px;
 }
 
 .search-bar button[type="submit"] {
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   border: none;
   background-color: #333;
   color: #fff;
   border-radius: 4px;
+}
+
+/*Aplicando diseño responsivo a HEADER*/
+@media screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header a img {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    margin-top: 10px;
+  }
 }
 
 
@@ -109,7 +134,7 @@ article {
   align-items: center;
   text-align: center;
   width: 30%;
-  margin-right: 20px;
+  margin-right: 1rem;
 }
 
 .productos {
@@ -129,7 +154,7 @@ p {
   text-align: center;
   background-color: #FFD700;
   color: #333;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   border: 2px solid #FFD700;
   text-decoration: none;
   width: 100px;
@@ -159,7 +184,7 @@ footer img {
   height: 50px;
 }
 
-footer ul {
+footer ul { 
   list-style: none;
   margin: 10px 0;
 }
@@ -240,7 +265,7 @@ form button[type="submit"] {
 .carousel {
   display: flex;
   scroll-behavior: smooth;
-}
+} 
 
 .slide {
   flex: 0 0 100%;
@@ -280,33 +305,54 @@ form button[type="submit"] {
 /*HISTORIA*/
 .titulo-principal {
   text-align: center;
+  border: 2px solid #FFD700;
+  padding: 10px;
 }
 
-.titulo-principal + p {
-  text-align: center;
-  font-size: smaller;
+@media screen and (max-width: 600px) {
+  .titulo-principal {
+    font-size: 24px; 
+  }
 }
+
 
 /*EVENTOS HISTORICOS*/
 .hechos-historicos {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .hechos-historicos a {
   display: flex;
   align-items: center;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .hechos-historicos img {
-  width: 200px; 
+  width: 200px;
   height: auto;
+  margin-bottom: 10px;
 }
 
-.hechos-historicos p {
-  color: #FFD700;
+.hechos-historicos hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ccc;
 }
+
+.frase-dia {
+  text-align: center;
+}
+
+.frase-dia p {
+  color: #fff;
+  font-style: italic;
+  margin-top: 10px;
+}
+
 /*FRASE DEL DÍA*/
 .frase-dia {
   text-align: center;
@@ -339,7 +385,7 @@ p {
 }
 
 .titulo-equipo {
-  font-size: 24px;
+  font-size: 1.8rem;
   margin-left: 0;
 }
 
@@ -359,11 +405,11 @@ p {
 }
 
 .texto-miembro h3 {
-  font-size: 18px;
+  font-size: 1.4rem;
 }
 
 .texto-miembro p {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 section p {
@@ -420,3 +466,7 @@ section p {
   color: black; 
 }
 
+/*FOOTER*/
+footer a:visited {
+  color: purple;
+}
