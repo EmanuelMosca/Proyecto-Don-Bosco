@@ -190,53 +190,92 @@ footer p {
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  max-width: 900px; 
+  margin: auto;
 }
 
 form label {
-  color: #ffd700;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 form input[type="email"] {
-  width: 300px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 form button[type="submit"] {
-  background-color: #ffd700;
-  color: red;
-  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #8b7703;
+  border: 2px solid #FFD700;
 }
+form label,
+form input[type="email"],
+form button[type="submit"] {
+  color: #F2F2F2;
+}
+
 /*iMAGEN PROMOCIONAL DE PRODUCTOS.HTML*/
 .productos-promocionales {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .productos-promocionales img {
-  width: 50%; 
+  width: 100%;
+  height: auto;
 }
 
 /*PRODUCTOS, MENU DESLIZABLE*/
-.productos-especificos {
+.carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel {
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
   text-align: center;
 }
 
-.slider {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.slide h3 {
+  font-size: 24px;
 }
 
-.slider > div {
-  width: 200px;
-  margin: 10px;
+.slide img {
+  width: 70%;
+  height: auto;
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .agregar-carrito {
-    display: block;
-    margin: 0 auto;
+  background-color: #FFD700; 
+  color: #333; 
+  padding: 10px 20px;
+  border: 2px solid #FFD700; 
+  text-decoration: none;
 }
 
+.agregar-carrito:hover {
+  background-color: #333; 
+  color: #FFD700; 
+}
 
 /*HISTORIA*/
 .titulo-principal {
