@@ -53,3 +53,20 @@ p {
     aspect-ratio: 16/9;
     }
 }
+
+// Definimos la animación llamada "zoom-in"
+@keyframes zoom-in {
+    from {
+    transform: scale(1);
+    }
+    to {
+    transform: scale(1.2);
+    }
+}
+
+.productos {
+    transition: transform 0.3s ease; // Agregamos una transición para suavizar el efecto
+    &:hover {
+      animation: zoom-in 0.3s forwards; // Aplicamos la animación cuando el cursor se acerque
+    }
+}

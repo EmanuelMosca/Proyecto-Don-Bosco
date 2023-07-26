@@ -1,3 +1,7 @@
+body {
+  background-color: #f0f0f0;
+  font-size: 16px; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Arial", sans-serif;
   color: #ffd700; }
@@ -83,6 +87,7 @@ nav a {
   text-decoration: none; }
 
 header {
+  background: linear-gradient(to right, #111, #444);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,6 +95,17 @@ header {
   background-color: #333; }
   header a img {
     width: 50px; }
+
+@keyframes zoom-in {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.2); } }
+
+header a img {
+  transition: transform 0.3s ease; }
+  header a img:hover {
+    animation: zoom-in 0.3s forwards; }
 
 footer {
   text-align: center; }
@@ -178,6 +194,17 @@ p {
     width: 100%;
     aspect-ratio: 16/9; }
 
+@keyframes zoom-in {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.2); } }
+
+.productos {
+  transition: transform 0.3s ease; }
+  .productos:hover {
+    animation: zoom-in 0.3s forwards; }
+
 .Titulo.promocional {
   background-repeat: no-repeat;
   background-size: cover;
@@ -245,10 +272,20 @@ p {
   font-style: italic;
   clear: both;
   margin-top: 10px; }
-  .frase-dia p {
-    color: white;
-    font-style: italic;
-    margin-top: 10px; }
+
+.frase-dia .animated-text {
+  animation-name: fadeInUp;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
 .box {
   background-color: gold;

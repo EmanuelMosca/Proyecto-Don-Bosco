@@ -1,0 +1,18 @@
+
+@function calcular-tamano-fuente($tamano-base, $factor) {
+    @return $tamano-base * $factor;
+}
+
+$tema: "claro"; 
+$tamano-fuente-base: 16px;
+
+body {
+    @if $tema == "claro" {
+    background-color: #f0f0f0; 
+    font-size: $tamano-fuente-base; 
+    } @else if $tema == "oscuro" {
+    background-color: #333; 
+    color: #fff; 
+    font-size: calcular-tamano-fuente($tamano-fuente-base, 1.2); 
+    }
+}

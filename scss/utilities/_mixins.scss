@@ -14,3 +14,12 @@
     background-color: #111;
     color: #ffd700;
 }
+
+// Estilos para botones amarillos
+@mixin button-amarillo {
+    background-color: $color-amarillo;
+    color: #333;
+    padding: 10px 20px;
+    border: 2px solid $color-amarillo;
+    text-decoration: none;
+}
