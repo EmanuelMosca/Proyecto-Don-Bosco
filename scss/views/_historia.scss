@@ -1,0 +1,47 @@
+.titulo-principal {
+    text-align: center;
+    border: 2px solid #FFD700;
+    padding: 10px;
+
+    @media screen and (max-width: 600px) {
+    font-size: 24px;
+    }
+}
+
+/*EVENTOS HISTORICOS*/
+.hechos-historicos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    a {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    }
+
+    img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    }
+
+    hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    }
+}
+
+.frase-dia {
+    text-align: center;
+    font-style: italic;
+    clear: both;
+    margin-top: 10px;
+    p {
+    color: white;
+    font-style: italic;
+    margin-top: 10px;
+    }
+}

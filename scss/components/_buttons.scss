@@ -1,0 +1,39 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+
+    input[type="text"] {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    }
+
+    button[type="submit"] {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    }
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .agregar-carrito {
+    background-color: #FFD700; 
+    color: #333; 
+    padding: 10px 20px;
+    border: 2px solid #FFD700; 
+    text-decoration: none;
+
+    &:hover {
+        background-color: #333; 
+        color: #FFD700; 
+    }
+    }
+}
