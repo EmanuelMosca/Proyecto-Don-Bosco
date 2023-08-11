@@ -1,0 +1,46 @@
+.Titulo.promocional {
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffd700;
+    text-align: center;
+}
+
+.productos-promocionales {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    img {
+    width: 100%;
+    height: auto;
+    }
+}
+
+  /* PRODUCTOS, MENU DESLIZABLE */
+.carousel-container {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    .carousel {
+    display: flex;
+    scroll-behavior: smooth;
+
+    .slide {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        text-align: center;
+
+        h3 {
+        font-size: 24px;
+        }
+
+        img {
+        width: 70%;
+        height: auto;
+        }
+    }
+    }
+}

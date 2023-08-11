@@ -1,0 +1,25 @@
+@mixin encabezados {
+    font-family: "Arial", sans-serif;
+    color: #ffd700;
+}
+
+@mixin parrafos {
+    font-family: "Verdana", sans-serif;
+    color: #ffd700;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@mixin fondo-texto {
+    background-color: #111;
+    color: #ffd700;
+}
+
+// Estilos para botones amarillos
+@mixin button-amarillo {
+    background-color: $color-amarillo;
+    color: #333;
+    padding: 10px 20px;
+    border: 2px solid $color-amarillo;
+    text-decoration: none;
+}

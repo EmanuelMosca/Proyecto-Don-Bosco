@@ -1,0 +1,21 @@
+
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .agregar-carrito {
+    background-color: #FFD700; 
+    color: #333; 
+    padding: 10px 20px;
+    border: 2px solid #FFD700; 
+    text-decoration: none;
+
+    &:hover {
+        background-color: #333; 
+        color: #FFD700; 
+    }
+    }
+}
